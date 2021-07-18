@@ -130,7 +130,7 @@ def log_mlflow(run_params: Dict, model: Any, model_name: str, y_true: np.ndarray
 
     roc_path = plot_roc(y_true, y_pred, '{} (auc = {:.2f})'.format(model_name, auc), run_params['artifact_dir'])
     pr_path = plot_precision_recall(y_true, y_pred,
-                                    '{} (prec: {:.2f}, recall: {:.2f})'.format(model_name, precision, recall),
+                                    '{} (prec = {:.2f}, recall = {:.2f})'.format(model_name, precision, recall),
                                     run_params['artifact_dir'])
     model_path = save_model(model, model_name, run_params['artifact_dir'])
 
